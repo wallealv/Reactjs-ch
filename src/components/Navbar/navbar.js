@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Itemlist from './Itemlist'
+import Cart from '../Cart/cartwidget';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,12 +29,15 @@ export default function ButtonAppBar() {
           <Itemlist edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           
     
-            
+
           </Itemlist>
+
           <Typography variant="h6" className={classes.title}>
             Alvaro
           </Typography>
           <Button color="inherit">Login</Button>
+          <Cart />
+
         </Toolbar>
       </AppBar>
     </div>

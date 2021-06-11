@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Navbar/navbar";
+import Itemlistcontainer from './components/Cart/Itemlistcontainer';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
     <Navbar />
       <header className="App-header">
-      
+      <Itemlistcontainer greetings='hola' />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <code>Alvaro clase1</code>
