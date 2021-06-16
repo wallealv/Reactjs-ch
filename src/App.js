@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Navbar/navbar";
 import Itemlistcontainer from './components/Cart/Itemlistcontainer';
-
+import Contador from './components/Counter/counter';
 
 function App() {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -16,6 +16,7 @@ function App() {
         <p>
           <code>Alvaro clase1</code>
         </p>
+        <Contador />
         <a
           className="App-link"
           href="https://reactjs.org"
