@@ -1,17 +1,20 @@
 import { users } from './items';
 
-function itemlist() {
-        return (
-            <div>
-                <ul>
-                    {users.map((item, index) => {
-                        return (
-                            <li key={index}> <p>Nombre: {item.nombre} <p></p>Altura: {item.altura}</p>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </div>
-        )
-    };
-export default itemlist;
+const Itemlist = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Nombre")
+    },3000)
+})
+
+Itemlist.then((plata) => {
+    <div>
+        <ul>
+            {users.map((item, index) => {
+            return (
+            <li key={index}> <p>${plata[0]}: {item.nombre} <p></p>Altura: {item.altura}</p>
+            </li>
+            )})}
+        </ul>
+    </div>
+})
+export default Itemlist
