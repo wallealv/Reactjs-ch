@@ -3,6 +3,7 @@ import './App.css';
 import Navbar from "./components/Navbar/navbar";
 import Itemlistcontainer from './components/Cart/Itemlistcontainer';
 import Contador from './components/Counter/counter';
+import Itemlist from './components/Items/itemlist';
 
 function App() {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
@@ -11,7 +12,8 @@ function App() {
     <div className="App">
     <Navbar />
       <header className="App-header">
-      <Itemlistcontainer greetings='hola' />
+        <Itemlist />
+        <Itemlistcontainer greetings='hola' />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           <code>Alvaro clase1</code>
