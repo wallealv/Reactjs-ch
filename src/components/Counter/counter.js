@@ -1,27 +1,16 @@
-import React, { Component }from 'react';
+import React, { useState } from 'react';
 
+function Contador() {
+  const [onAdd, setonAdd] = useState(1);
+  const stock = 5
 
-class Contador extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        count: 0
-      };
-    }
-  
-    render() {
-      return (
-        <div>
-          <p>Clicks {this.state.count}</p>
-          <button onClick={() => this.setState({ count: this.state.count + 1 })}>
-            +
-          </button>
-          <button onClick={() => this.setState({ count: this.state.count - 1 })}>
-            -
-          </button>
-        </div>
-      );
-    }
-  }
+  return (
+    <div>
+      <p>You clicked {onAdd} times</p>
+    
+      <button onClick={ ()=>{ onAdd < stock ? setonAdd(onAdd+1) : console.log(onAdd)}}> click </button>
+    </div>
+  );
+}
 
-export default Contador
+  export default Contador
