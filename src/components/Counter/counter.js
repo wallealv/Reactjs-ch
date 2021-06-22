@@ -1,16 +1,35 @@
 import React, { useState } from 'react';
 
 function Contador() {
-  const [onAdd, setonAdd] = useState(1);
+
+  const [total, setTotal] = useState(0);
   const stock = 5
+  
+  
+  const suma = () => {
+    let sumaclick = total + 1;
+    setTotal(sumaclick);
+  }
+  
+  const resta = () => {
+    let restaclick = total - 1;
+    setTotal(restaclick);
+  }
+  
+  const onAdd = () => {
+    let agregarcarrito = total * 0;
+    setTotal(agregarcarrito)
+  }
 
-  return (
-    <div>
-      <p>You clicked {onAdd} times</p>
+      return (
+        <div>
+          <p>You clicked {total} times</p>
+          <button onClick={ ()=>{ total < stock ? suma() : console.log(onAdd)}}> + </button>
+          <button onClick={ ()=>{ total > 0 ? resta() : console.log(onAdd)}}> - </button>
+          <button onClick={() => onAdd()}> sumar al carrito </button>
+      
+        </div>
+      )
     
-      <button onClick={ ()=>{ onAdd < stock ? setonAdd(onAdd+1) : console.log(onAdd)}}> click </button>
-    </div>
-  );
-}
-
-  export default Contador
+};
+export default Contador

@@ -12,7 +12,7 @@ function App() {
     <div className="App">
     <Navbar />
       <header className="App-header">
-        <Itemlist />
+        
         <Itemlistcontainer greetings='hola' />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
