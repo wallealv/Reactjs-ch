@@ -5,7 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Itemlist from './Itemlist'
-import Cart from '../Cart/cartwidget';
+import Cart from '../CartWidget/cartwidget';
 
 const useStyles = makeStyles((theme) => ({
   root: {
