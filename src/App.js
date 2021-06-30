@@ -3,13 +3,14 @@ import './App.css';
 import Navbar from "./components/Navbar/navbar";
 import Itemlistcontainer from './components/CartWidget/Itemlistcontainer';
 import Itemlist from './components/itemlistcontainer/itemlistcontainer';
-
+import Itemlistdetail from "./components/itemlistcontainer/itemdetail"
 function App() {
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
   return (
     <div className="App">
-    <Navbar />
+      <Navbar />
+      <Itemlistdetail/>
       <header className="App-header">
         <Itemlist />
         <Itemlistcontainer greetings='hola' />

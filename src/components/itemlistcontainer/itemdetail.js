@@ -1,4 +1,4 @@
-import { users } from './dbitem';
+import { users } from './itemlistdetail';
 
 const Itemlist = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -6,15 +6,16 @@ const Itemlist = new Promise((resolve, reject) => {
     },3000)
 })
 
-Itemlist.then((plata) => {
+Itemlist.then((resolve) => {
+    return(
     <div>
         <ul>
             {users.map((item, index) => {
             return (
-            <li key={index}> <p>${plata[0]}: {item.nombre} <p></p>Altura: {item.altura}</p>
+            <li key={index}> <p>${resolve[0]}: {item.nombre} <p></p>precio: {item.precio}</p>
             </li>
             )})}
         </ul>
     </div>
-})
+)},[])
 export default Itemlist
